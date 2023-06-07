@@ -3,39 +3,32 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { AtlasLogoSvgComponent } from './atlas-logo-svg/atlas-logo-svg.component';
+import { AtlasLogoSvgComponent } from '../svg/atlas-logo-svg/atlas-logo-svg.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { HeroSvgComponent } from './hero-svg/hero-svg.component';
+import { HeroSvgComponent } from '../svg/hero-svg/hero-svg.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { ButtonComponent } from './button/button.component';
 import { PromoSectionComponent } from './promo-section/promo-section.component';
-import { PromoSvgComponent } from './promo-svg/promo-svg.component';
-import { GcpSvgComponent } from './gcp-svg/gcp-svg.component';
-import { AwsSvgComponent } from './aws-svg/aws-svg.component';
+import { PromoSvgComponent } from '../svg/promo-svg/promo-svg.component';
+import { GcpSvgComponent } from '../svg/gcp-svg/gcp-svg.component';
+import { AngularIconSvgComponent } from '../svg/angular-icon-svg/angular-icon-svg.component';
 import { ProviderCardComponent } from './provider-card/provider-card.component';
-import { AngularIconSvgComponent } from './angular-icon-svg/angular-icon-svg.component';
+import { SvgModule } from '../svg/svg.module';
 
 @NgModule({
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, SvgModule],
   declarations: [
     FooterComponent,
     NavbarComponent,
-    AtlasLogoSvgComponent,
     LandingPageComponent,
-    HeroSvgComponent,
     HeroSectionComponent,
     ButtonComponent,
     PromoSectionComponent,
-    PromoSvgComponent,
-    GcpSvgComponent,
-    AwsSvgComponent,
     ProviderCardComponent,
-    AngularIconSvgComponent,
   ],
   exports: [
     NavbarComponent,
     FooterComponent,
-    AtlasLogoSvgComponent,
     LandingPageComponent,
     HeroSvgComponent,
     HeroSectionComponent,
