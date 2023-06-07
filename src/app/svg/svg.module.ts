@@ -6,6 +6,7 @@ import { PromoSvgComponent } from './promo-svg/promo-svg.component';
 import { GcpSvgComponent } from './gcp-svg/gcp-svg.component';
 import { HeroSvgComponent } from './hero-svg/hero-svg.component';
 import { AngularIconSvgComponent } from './angular-icon-svg/angular-icon-svg.component';
+import { ReactIconSvgComponent } from './react-icon-svg/react-icon-svg.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AngularIconSvgComponent } from './angular-icon-svg/angular-icon-svg.com
     GcpSvgComponent,
     HeroSvgComponent,
     AngularIconSvgComponent,
+    ReactIconSvgComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -24,6 +26,7 @@ import { AngularIconSvgComponent } from './angular-icon-svg/angular-icon-svg.com
     GcpSvgComponent,
     HeroSvgComponent,
     AngularIconSvgComponent,
+    ReactIconSvgComponent,
   ],
 })
 export class SvgModule {}
