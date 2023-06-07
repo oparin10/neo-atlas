@@ -6,6 +6,6 @@ import { LandingLayoutComponent } from './landing-layout.component';
 @NgModule({
   imports: [CommonModule, RouterModule],
   declarations: [LandingLayoutComponent],
-  exports: [LandingLayoutComponent],
+  exports: [],
 })
 export class LandingLayoutModule {}
