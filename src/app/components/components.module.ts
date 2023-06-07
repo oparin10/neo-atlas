@@ -9,6 +9,7 @@ import { HeroSvgComponent } from './hero-svg/hero-svg.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { ButtonComponent } from './button/button.component';
 import { PromoSectionComponent } from './promo-section/promo-section.component';
+import { PromoSvgComponent } from './promo-svg/promo-svg.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
@@ -21,6 +22,7 @@ import { PromoSectionComponent } from './promo-section/promo-section.component';
     HeroSectionComponent,
     ButtonComponent,
     PromoSectionComponent,
+    PromoSvgComponent,
   ],
   exports: [
     NavbarComponent,
