@@ -9,6 +9,7 @@ import { AngularIconSvgComponent } from './angular-icon-svg/angular-icon-svg.com
 import { ReactIconSvgComponent } from './react-icon-svg/react-icon-svg.component';
 import { TsIconSvgComponent } from './ts-icon-svg/ts-icon-svg.component';
 import { JsIconSvgComponent } from './js-icon-svg/js-icon-svg.component';
+import { RustIconSvgComponent } from './rust-icon-svg/rust-icon-svg.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { JsIconSvgComponent } from './js-icon-svg/js-icon-svg.component';
     ReactIconSvgComponent,
     TsIconSvgComponent,
     JsIconSvgComponent,
+    RustIconSvgComponent,
   ],
   imports: [CommonModule],
   exports: [
