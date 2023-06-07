@@ -30,7 +30,7 @@
     <!-- Text section ends -->
   </div>
   <div
-    class="text-center px-8 mx-auto flex flex-col justify-center items-center gap-6 lg:gap-4"
+    class="text-center px-8 mx-auto flex flex-col justify-center items-center gap-8 lg:gap-4"
   >
     <h3 class="text-3xl text-white font-black leading-snug">
       Ferramentas que utilizamos
@@ -39,5 +39,11 @@
       Lorem ipsum dolor sit amet consectur. Tristique turpis a solicidicun
       tempus mauris neque molese gravita imperdiet.
     </h4>
+
+    <div class="flex gap-6 lg:gap-10 lg:mt-8 text-3xl lg:text-5xl">
+      <ng-container *ngFor="let item of skills">
+        <ng-container *ngComponentOutlet="item.component"></ng-container>
+      </ng-container>
+    </div>
   </div>
 </section>
