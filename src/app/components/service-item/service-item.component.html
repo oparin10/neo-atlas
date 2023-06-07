@@ -1,5 +1,11 @@
-<div class="flex flex-col justify-center items-start">
-  <ng-container *ngComponentOutlet="icon"></ng-container>
+<div
+  class="gap-4 flex flex-col justify-center lg:items-start items-center text-center lg:text-left first:text-[85px] w-52"
+>
+  <div
+    class="flex lg:justify-start justify-center items-center w-full h-20 overflow-hidden"
+  >
+    <ng-container *ngComponentOutlet="icon"></ng-container>
+  </div>
   <h5 class="text-lg text-secondary-900 font-extrabold">{{ title }}</h5>
   <p class="text-sm text-secondary-800 font-normal leading-relaxed">
     {{ text }}
