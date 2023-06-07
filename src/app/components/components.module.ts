@@ -8,6 +8,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HeroSvgComponent } from './hero-svg/hero-svg.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { ButtonComponent } from './button/button.component';
+import { PromoSectionComponent } from './promo-section/promo-section.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
@@ -19,6 +20,7 @@ import { ButtonComponent } from './button/button.component';
     HeroSvgComponent,
     HeroSectionComponent,
     ButtonComponent,
+    PromoSectionComponent,
   ],
   exports: [
     NavbarComponent,
