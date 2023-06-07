@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AtlasLogoSvgComponent } from './atlas-logo-svg/atlas-logo-svg.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { HeroSvgComponent } from './hero-svg/hero-svg.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
@@ -13,12 +14,14 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     NavbarComponent,
     AtlasLogoSvgComponent,
     LandingPageComponent,
+    HeroSvgComponent,
   ],
   exports: [
     NavbarComponent,
     FooterComponent,
     AtlasLogoSvgComponent,
     LandingPageComponent,
+    HeroSvgComponent,
   ],
 })
 export class ComponentsModule {}
