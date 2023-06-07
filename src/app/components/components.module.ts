@@ -10,6 +10,8 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { ButtonComponent } from './button/button.component';
 import { PromoSectionComponent } from './promo-section/promo-section.component';
 import { PromoSvgComponent } from './promo-svg/promo-svg.component';
+import { GcpSvgComponent } from './gcp-svg/gcp-svg.component';
+import { AwsSvgComponent } from './aws-svg/aws-svg.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
@@ -23,6 +25,8 @@ import { PromoSvgComponent } from './promo-svg/promo-svg.component';
     ButtonComponent,
     PromoSectionComponent,
     PromoSvgComponent,
+    GcpSvgComponent,
+    AwsSvgComponent,
   ],
   exports: [
     NavbarComponent,
