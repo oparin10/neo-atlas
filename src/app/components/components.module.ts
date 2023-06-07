@@ -19,6 +19,7 @@ import { ServiceItemComponent } from './service-item/service-item.component';
 import { RemoteWorkSectionComponent } from './remote-work-section/remote-work-section.component';
 import { ProcessCardComponent } from './process-card/process-card.component';
 import { OurProcessComponent } from './our-process/our-process.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule, SvgModule],
@@ -35,6 +36,7 @@ import { OurProcessComponent } from './our-process/our-process.component';
     RemoteWorkSectionComponent,
     ProcessCardComponent,
     OurProcessComponent,
+    ContactUsComponent,
   ],
   exports: [
     NavbarComponent,
