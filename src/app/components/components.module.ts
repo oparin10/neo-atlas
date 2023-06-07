@@ -15,6 +15,7 @@ import { AngularIconSvgComponent } from '../svg/angular-icon-svg/angular-icon-sv
 import { ProviderCardComponent } from './provider-card/provider-card.component';
 import { SvgModule } from '../svg/svg.module';
 import { OurServicesComponent } from './our-services/our-services.component';
+import { ServiceItemComponent } from './service-item/service-item.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule, SvgModule],
@@ -27,6 +28,7 @@ import { OurServicesComponent } from './our-services/our-services.component';
     PromoSectionComponent,
     ProviderCardComponent,
     OurServicesComponent,
+    ServiceItemComponent,
   ],
   exports: [
     NavbarComponent,
