@@ -1,6 +1,6 @@
 <button
   (click)="click.emit($event)"
-  class="text-sm py-2 px-6 rounded-full bg-primary-400 flex justify-center items-center text-white font-extrabold text-center"
+  class="{{ styles.base }} {{ styles[variant] }}"
 >
   <ng-content></ng-content>
 </button>
