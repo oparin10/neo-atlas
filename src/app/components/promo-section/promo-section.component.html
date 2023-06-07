@@ -1,14 +1,29 @@
-<section>
-  <div class="flex">
-    <h3 class="text-3xl text-white font-black leading-snug max-w-[20ch]">
-      Métodos inteligentes. Melhores resultados.
-    </h3>
+<section class="bg-secondary-900 w-full h-auto">
+  <div
+    class="px-8 mx-auto lg:py-20 py-16 grid grid-rows-2 lg:grid-rows-none lg:grid-cols-2 gap-24"
+  >
+    <div class="order-1 lg:order-0">
+      <div class="flex justify-center items-center">
+        <app-promo-svg class="text-[16px] lg:text-[19px]" />
+      </div>
+    </div>
+    <div class="order-0 lg:order-1 flex flex-col gap-14 lg:gap-10">
+      <h3 class="text-3xl text-white font-black leading-snug max-w-[20ch]">
+        Métodos inteligentes. Melhores resultados.
+      </h3>
 
-    <h4>
-      Seu negócio precisa crescer, mas os custos não. Receba milhares de acessos
-      sem ter problemas com servidores ou gastos desnecessários.
-    </h4>
-
-    <div class="flex gap-5"></div>
+      <h4 class="font-normal text-base text-white leading-normal max-w-[44ch]">
+        Seu negócio precisa crescer, mas os custos não. Receba milhares de
+        acessos sem ter problemas com servidores ou gastos desnecessários.
+      </h4>
+      <div class="flex gap-10">
+        <app-provider-card class="text-[13px] lg:text-[20px]">
+          <app-aws-svg class="text-[50px] lg:text-[80px]" />
+        </app-provider-card>
+        <app-provider-card class="text-[13px] lg:text-[20px]">
+          <app-gcp-svg class="text-[50px] lg:text-[80px]" />
+        </app-provider-card>
+      </div>
+    </div>
   </div>
 </section>

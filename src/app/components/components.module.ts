@@ -12,6 +12,7 @@ import { PromoSectionComponent } from './promo-section/promo-section.component';
 import { PromoSvgComponent } from './promo-svg/promo-svg.component';
 import { GcpSvgComponent } from './gcp-svg/gcp-svg.component';
 import { AwsSvgComponent } from './aws-svg/aws-svg.component';
+import { ProviderCardComponent } from './provider-card/provider-card.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
@@ -27,6 +28,7 @@ import { AwsSvgComponent } from './aws-svg/aws-svg.component';
     PromoSvgComponent,
     GcpSvgComponent,
     AwsSvgComponent,
+    ProviderCardComponent,
   ],
   exports: [
     NavbarComponent,
