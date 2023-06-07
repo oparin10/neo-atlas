@@ -12,7 +12,13 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     FooterComponent,
     NavbarComponent,
     AtlasLogoSvgComponent,
-    LandingPageComponent
+    LandingPageComponent,
+  ],
+  exports: [
+    NavbarComponent,
+    FooterComponent,
+    AtlasLogoSvgComponent,
+    LandingPageComponent,
   ],
 })
 export class ComponentsModule {}
