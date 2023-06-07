@@ -11,6 +11,10 @@ import { TsIconSvgComponent } from './ts-icon-svg/ts-icon-svg.component';
 import { JsIconSvgComponent } from './js-icon-svg/js-icon-svg.component';
 import { RustIconSvgComponent } from './rust-icon-svg/rust-icon-svg.component';
 import { FigmaIconSvgComponent } from './figma-icon-svg/figma-icon-svg.component';
+import { ServiceIconOneComponent } from './service-icon-one/service-icon-one.component';
+import { ServiceIconTwoComponent } from './service-icon-two/service-icon-two.component';
+import { ServiceIconThreeComponent } from './service-icon-three/service-icon-three.component';
+import { ServiceIconFourComponent } from './service-icon-four/service-icon-four.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,10 @@ import { FigmaIconSvgComponent } from './figma-icon-svg/figma-icon-svg.component
     JsIconSvgComponent,
     RustIconSvgComponent,
     FigmaIconSvgComponent,
+    ServiceIconOneComponent,
+    ServiceIconTwoComponent,
+    ServiceIconThreeComponent,
+    ServiceIconFourComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -36,6 +44,10 @@ import { FigmaIconSvgComponent } from './figma-icon-svg/figma-icon-svg.component
     AngularIconSvgComponent,
     ReactIconSvgComponent,
     TsIconSvgComponent,
+    ServiceIconFourComponent,
+    ServiceIconOneComponent,
+    ServiceIconThreeComponent,
+    ServiceIconTwoComponent,
   ],
 })
 export class SvgModule {}
