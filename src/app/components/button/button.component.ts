@@ -17,7 +17,7 @@ export class ButtonComponent {
 }
 
 const variants = {
-  base: 'text-sm py-2 px-6 rounded-full flex justify-center items-center font-extrabold text-center',
+  base: 'w-full text-sm py-2 px-10 rounded-full flex justify-center items-center font-extrabold text-center',
   contained: 'bg-primary-400 text-white',
   outlined: 'bg-transparent text-primary-400 border border-primary-400',
 };
