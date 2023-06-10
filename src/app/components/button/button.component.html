@@ -1,6 +1,22 @@
+<!-- https://github.com/angular/angular/issues/22972#issuecomment-407358396 -->
+
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>
+
 <button
+  *ngIf="!href"
   (click)="click.emit($event)"
   class="{{ styles.base }} {{ styles[variant] }}"
 >
-  <ng-content></ng-content>
+  <ng-container *ngTemplateOutlet="content"></ng-container>
 </button>
+
+<a
+  *ngIf="href"
+  class="{{ styles.base }} {{ styles[variant] }}"
+  (click)="click.emit($event)"
+  [attr.href]="href"
+>
+  <ng-container *ngTemplateOutlet="content"></ng-container>
+</a>

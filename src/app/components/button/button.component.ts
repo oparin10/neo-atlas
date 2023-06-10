@@ -11,6 +11,7 @@ export class ButtonComponent {
   @Output() click: EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
 
   @Input() variant: Variant = 'contained';
+  @Input() href?: string;
 
   styles = variants;
 }
