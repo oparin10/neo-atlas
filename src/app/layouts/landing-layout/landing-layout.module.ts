@@ -7,6 +7,6 @@ import { ComponentsModule } from 'src/app/components/components.module';
 @NgModule({
   imports: [CommonModule, RouterModule, ComponentsModule],
   declarations: [LandingLayoutComponent],
-  exports: [],
+  exports: [LandingLayoutComponent],
 })
 export class LandingLayoutModule {}

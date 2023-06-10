@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AtlasLogoSvgComponent } from '../svg/atlas-logo-svg/atlas-logo-svg.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { LandingPageComponent } from '../pages/landing-page/landing-page.component';
 import { HeroSvgComponent } from '../svg/hero-svg/hero-svg.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { ButtonComponent } from './button/button.component';
@@ -39,7 +39,6 @@ export function playerFactory() {
   declarations: [
     FooterComponent,
     NavbarComponent,
-    LandingPageComponent,
     HeroSectionComponent,
     ButtonComponent,
     PromoSectionComponent,
@@ -55,10 +54,14 @@ export function playerFactory() {
   exports: [
     NavbarComponent,
     FooterComponent,
-    LandingPageComponent,
     HeroSvgComponent,
     HeroSectionComponent,
     ButtonComponent,
+    PromoSectionComponent,
+    OurServicesComponent,
+    RemoteWorkSectionComponent,
+    OurProcessComponent,
+    ContactUsComponent,
   ],
 })
 export class ComponentsModule {}
