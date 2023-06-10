@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   styles: [],
 })
 export class HeroSectionComponent {
-  handleClick(event: MouseEvent): void {
-    console.log('Button clicked', event);
+  onClick(): void {
+    const element = document.getElementById('services');
+
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }
