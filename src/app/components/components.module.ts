@@ -19,6 +19,7 @@ import { RemoteLottieAnimationComponent } from './remote-lottie-animation/remote
 
 import player from 'lottie-web';
 import { LottieModule } from 'ngx-lottie';
+import { TextInputComponent } from './text-input/text-input.component';
 
 export function playerFactory() {
   return player;
@@ -45,6 +46,7 @@ export function playerFactory() {
     OurProcessComponent,
     ContactUsComponent,
     RemoteLottieAnimationComponent,
+    TextInputComponent,
   ],
   exports: [
     FooterComponent,
