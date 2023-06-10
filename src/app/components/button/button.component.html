@@ -16,7 +16,7 @@
   *ngIf="href"
   class="{{ styles.base }} {{ styles[variant] }}"
   (click)="click.emit($event)"
-  [attr.href]="href"
+  routerLink="{{ href }}"
 >
   <ng-container *ngTemplateOutlet="content"></ng-container>
 </a>
