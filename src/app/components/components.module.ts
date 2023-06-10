@@ -1,14 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { SvgModule } from '../svg/svg.module';
+// components exports
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { HeroSvgComponent } from '../svg/hero-svg/hero-svg.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { ButtonComponent } from './button/button.component';
 import { PromoSectionComponent } from './promo-section/promo-section.component';
 import { ProviderCardComponent } from './provider-card/provider-card.component';
-import { SvgModule } from '../svg/svg.module';
 import { OurServicesComponent } from './our-services/our-services.component';
 import { ServiceItemComponent } from './service-item/service-item.component';
 import { RemoteWorkSectionComponent } from './remote-work-section/remote-work-section.component';
@@ -47,16 +47,19 @@ export function playerFactory() {
     RemoteLottieAnimationComponent,
   ],
   exports: [
-    NavbarComponent,
     FooterComponent,
-    HeroSvgComponent,
+    NavbarComponent,
     HeroSectionComponent,
     ButtonComponent,
     PromoSectionComponent,
+    ProviderCardComponent,
     OurServicesComponent,
+    ServiceItemComponent,
     RemoteWorkSectionComponent,
+    ProcessCardComponent,
     OurProcessComponent,
     ContactUsComponent,
+    RemoteLottieAnimationComponent,
   ],
 })
 export class ComponentsModule {}
