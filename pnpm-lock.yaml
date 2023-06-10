@@ -34,6 +34,12 @@ dependencies:
   express:
     specifier: ^4.15.2
     version: 4.18.2
+  lottie-web:
+    specifier: ^5.12.0
+    version: 5.12.0
+  ngx-lottie:
+    specifier: ^10.0.0
+    version: 10.0.0(@angular/core@16.0.0)(lottie-web@5.12.0)
   rxjs:
     specifier: ~7.8.0
     version: 7.8.0
@@ -2222,6 +2228,11 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@scarf/scarf@1.1.1:
+    resolution: {integrity: sha512-VGbKDbk1RFIaSmdVb0cNjjWJoRWRI/Weo23AjRCC2nryO0iAS8pzsToJfPVPtVs74WHw4L1UTADNdIYRLkirZQ==}
+    requiresBuild: true
+    dev: false
 
   /@schematics/angular@16.0.4:
     resolution: {integrity: sha512-3uu5xq136broqVKCGwYKENZYF8SO4EU15FHRV2EFY/PqU2sU5QBlsGG2Z1JYAVE3aevsk9ORkPb1tRh6yP28Rw==}
@@ -5386,6 +5397,10 @@ packages:
       - supports-color
     dev: true
 
+  /lottie-web@5.12.0:
+    resolution: {integrity: sha512-tt2oiv0EmXC8J/RF877dVCo93vZBBnww+SO6dldREgHD8EsP97jQ42JRryIRfY+6aVESQsHYNEAYgH25cBFy7A==}
+    dev: false
+
   /lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
     dependencies:
@@ -5743,6 +5758,18 @@ packages:
   /neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
+
+  /ngx-lottie@10.0.0(@angular/core@16.0.0)(lottie-web@5.12.0):
+    resolution: {integrity: sha512-8a0ufv13+o1cLR25SQ4N731rxD9nIA7F1jyo3l/jbUlRnrlcF5heFqWyTYnRf4BG0LQ4URuybN/nr+xbGT1W9Q==}
+    peerDependencies:
+      '@angular/core': '>=15'
+      lottie-web: '>=5.9.2'
+    dependencies:
+      '@angular/core': 16.0.0(rxjs@7.8.0)(zone.js@0.13.0)
+      '@scarf/scarf': 1.1.1
+      lottie-web: 5.12.0
+      tslib: 2.5.0
+    dev: false
 
   /nice-napi@1.0.2:
     resolution: {integrity: sha512-px/KnJAJZf5RuBGcfD+Sp2pAKq0ytz8j+1NehvgIGFkvtvFrDM3T8E4x/JJODXK9WZow8RRGrbA9QQ3hs+pDhA==}
