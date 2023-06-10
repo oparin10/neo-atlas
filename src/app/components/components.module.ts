@@ -21,6 +21,8 @@ import player from 'lottie-web';
 import { LottieModule } from 'ngx-lottie';
 import { TextInputComponent } from './text-input/text-input.component';
 import { TextAreaComponent } from './text-area/text-area.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { PhoneNumberComponent } from './phone-number/phone-number.component';
 
 export function playerFactory() {
   return player;
@@ -49,6 +51,8 @@ export function playerFactory() {
     RemoteLottieAnimationComponent,
     TextInputComponent,
     TextAreaComponent,
+    ContactFormComponent,
+    PhoneNumberComponent,
   ],
   exports: [
     FooterComponent,
@@ -64,6 +68,9 @@ export function playerFactory() {
     OurProcessComponent,
     ContactUsComponent,
     RemoteLottieAnimationComponent,
+    TextInputComponent,
+    TextAreaComponent,
+    ContactFormComponent,
   ],
 })
 export class ComponentsModule {}
