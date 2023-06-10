@@ -20,9 +20,22 @@ import { RemoteWorkSectionComponent } from './remote-work-section/remote-work-se
 import { ProcessCardComponent } from './process-card/process-card.component';
 import { OurProcessComponent } from './our-process/our-process.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { RemoteLottieAnimationComponent } from './remote-lottie-animation/remote-lottie-animation.component';
+
+import player from 'lottie-web';
+import { LottieModule } from 'ngx-lottie';
+
+export function playerFactory() {
+  return player;
+}
 
 @NgModule({
-  imports: [CommonModule, RouterModule, SvgModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    SvgModule,
+    LottieModule.forRoot({ player: playerFactory }),
+  ],
   declarations: [
     FooterComponent,
     NavbarComponent,
@@ -37,6 +50,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     ProcessCardComponent,
     OurProcessComponent,
     ContactUsComponent,
+    RemoteLottieAnimationComponent,
   ],
   exports: [
     NavbarComponent,
