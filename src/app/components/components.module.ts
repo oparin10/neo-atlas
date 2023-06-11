@@ -29,6 +29,26 @@ export function playerFactory() {
   return player;
 }
 
+const declarations = [
+  FooterComponent,
+  NavbarComponent,
+  HeroSectionComponent,
+  ButtonComponent,
+  PromoSectionComponent,
+  ProviderCardComponent,
+  OurServicesComponent,
+  ServiceItemComponent,
+  RemoteWorkSectionComponent,
+  ProcessCardComponent,
+  OurProcessComponent,
+  ContactUsComponent,
+  RemoteLottieAnimationComponent,
+  TextInputComponent,
+  TextAreaComponent,
+  ContactFormComponent,
+  PhoneNumberComponent,
+];
+
 @NgModule({
   imports: [
     CommonModule,
@@ -37,42 +57,7 @@ export function playerFactory() {
     LottieModule.forRoot({ player: playerFactory }),
     ReactiveFormsModule,
   ],
-  declarations: [
-    FooterComponent,
-    NavbarComponent,
-    HeroSectionComponent,
-    ButtonComponent,
-    PromoSectionComponent,
-    ProviderCardComponent,
-    OurServicesComponent,
-    ServiceItemComponent,
-    RemoteWorkSectionComponent,
-    ProcessCardComponent,
-    OurProcessComponent,
-    ContactUsComponent,
-    RemoteLottieAnimationComponent,
-    TextInputComponent,
-    TextAreaComponent,
-    ContactFormComponent,
-    PhoneNumberComponent,
-  ],
-  exports: [
-    FooterComponent,
-    NavbarComponent,
-    HeroSectionComponent,
-    ButtonComponent,
-    PromoSectionComponent,
-    ProviderCardComponent,
-    OurServicesComponent,
-    ServiceItemComponent,
-    RemoteWorkSectionComponent,
-    ProcessCardComponent,
-    OurProcessComponent,
-    ContactUsComponent,
-    RemoteLottieAnimationComponent,
-    TextInputComponent,
-    TextAreaComponent,
-    ContactFormComponent,
-  ],
+  declarations: [...declarations],
+  exports: [...declarations],
 })
 export class ComponentsModule {}
