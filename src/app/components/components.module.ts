@@ -23,6 +23,7 @@ import { TextInputComponent } from './text-input/text-input.component';
 import { TextAreaComponent } from './text-area/text-area.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { PhoneNumberComponent } from './phone-number/phone-number.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 export function playerFactory() {
   return player;
@@ -34,6 +35,7 @@ export function playerFactory() {
     RouterModule,
     SvgModule,
     LottieModule.forRoot({ player: playerFactory }),
+    ReactiveFormsModule,
   ],
   declarations: [
     FooterComponent,
