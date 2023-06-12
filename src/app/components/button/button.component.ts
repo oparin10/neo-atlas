@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-type Variant = 'contained' | 'outlined';
-type Size = 'small' | 'medium' | 'large';
+export type Variant = 'contained' | 'outlined';
+export type Size = 'small' | 'medium' | 'large';
 
 @Component({
   selector: 'app-button',
