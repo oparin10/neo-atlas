@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 type Variant = 'contained' | 'outlined';
+type Size = 'small' | 'medium' | 'large';
 
 @Component({
   selector: 'app-button',
@@ -11,10 +12,18 @@ export class ButtonComponent {
   @Output() click: EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
 
   @Input() variant: Variant = 'contained';
+  @Input() size: Size = 'medium';
   @Input() href?: string;
 
   styles = variants;
+  sizes = sizes;
 }
+
+const sizes = {
+  medium: 'text-sm py-2 px-10',
+  small: 'text-[0.625rem] py-1 px-8',
+  large: 'text-lg py-2 px-12',
+};
 
 const variants = {
   base: 'active:scale-[0.95] transition-all w-full text-sm py-2 px-10 rounded-full flex justify-center items-center font-extrabold text-center',

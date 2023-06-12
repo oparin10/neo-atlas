@@ -7,14 +7,14 @@
 <button
   *ngIf="!href"
   (click)="click.emit($event)"
-  class="{{ styles.base }} {{ styles[variant] }}"
+  class="{{ styles.base }} {{ sizes[size] }} {{ styles[variant] }}"
 >
   <ng-container *ngTemplateOutlet="content"></ng-container>
 </button>
 
 <a
   *ngIf="href"
-  class="{{ styles.base }} {{ styles[variant] }}"
+  class="{{ styles.base }} {{ sizes[size] }} {{ styles[variant] }}"
   (click)="click.emit($event)"
   routerLink="{{ href }}"
 >
