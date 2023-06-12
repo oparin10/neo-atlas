@@ -11,6 +11,7 @@ export type Size = 'small' | 'medium' | 'large';
 export class ButtonComponent {
   @Output() click: EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
 
+  @Input() disabled?: boolean;
   @Input() variant: Variant = 'contained';
   @Input() size: Size = 'medium';
   @Input() href?: string;

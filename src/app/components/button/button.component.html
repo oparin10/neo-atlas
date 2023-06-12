@@ -7,6 +7,11 @@
 <button
   *ngIf="!href"
   (click)="click.emit($event)"
+  disabled="{{ disabled }}"
+  [ngClass]="{
+    'disabled:cursor-not-allowed select-none pointer-events-none bg-gray-300 text-gray-400':
+      disabled
+  }"
   class="{{ styles.base }} {{ sizes[size] }} {{ styles[variant] }}"
 >
   <ng-container *ngTemplateOutlet="content"></ng-container>
