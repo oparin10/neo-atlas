@@ -24,6 +24,7 @@ import { TextAreaComponent } from './text-area/text-area.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { PhoneNumberComponent } from './phone-number/phone-number.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ContactCardComponent } from './contact-card/contact-card.component';
 
 export function playerFactory() {
   return player;
@@ -57,7 +58,7 @@ const declarations = [
     LottieModule.forRoot({ player: playerFactory }),
     ReactiveFormsModule,
   ],
-  declarations: [...declarations],
+  declarations: [...declarations, ContactCardComponent],
   exports: [...declarations],
 })
 export class ComponentsModule {}

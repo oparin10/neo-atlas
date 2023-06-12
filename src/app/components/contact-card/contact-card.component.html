@@ -1,0 +1,17 @@
+<article class="shadow-lg h-64 w-56 flex flex-col gap-4">
+  <div class="h-28 w-28 overflow-hidden">
+    <img
+      class="h-full w-full object-center object-contain"
+      [src]="picture"
+      [alt]="name"
+    />
+  </div>
+
+  <h4 class="text-base font-bold text-secondary-700">{{ name }}</h4>
+
+  <h5 class="font-normal text-secondary-700 text-[0.65rem]">{{ role }}</h5>
+
+  <div class="flex justify-center items-center" role="presentation">
+    <app-whatsapp-icon />
+  </div>
+</article>

@@ -15,39 +15,30 @@ import { ServiceIconOneComponent } from './service-icon-one/service-icon-one.com
 import { ServiceIconTwoComponent } from './service-icon-two/service-icon-two.component';
 import { ServiceIconThreeComponent } from './service-icon-three/service-icon-three.component';
 import { ServiceIconFourComponent } from './service-icon-four/service-icon-four.component';
+import { WhatsappIconComponent } from './whatsapp-icon/whatsapp-icon.component';
+
+const DECLARATIONS = [
+  AwsSvgComponent,
+  AtlasLogoSvgComponent,
+  PromoSvgComponent,
+  GcpSvgComponent,
+  HeroSvgComponent,
+  AngularIconSvgComponent,
+  ReactIconSvgComponent,
+  TsIconSvgComponent,
+  JsIconSvgComponent,
+  RustIconSvgComponent,
+  FigmaIconSvgComponent,
+  ServiceIconOneComponent,
+  ServiceIconTwoComponent,
+  ServiceIconThreeComponent,
+  ServiceIconFourComponent,
+  WhatsappIconComponent,
+];
 
 @NgModule({
-  declarations: [
-    AwsSvgComponent,
-    AtlasLogoSvgComponent,
-    PromoSvgComponent,
-    GcpSvgComponent,
-    HeroSvgComponent,
-    AngularIconSvgComponent,
-    ReactIconSvgComponent,
-    TsIconSvgComponent,
-    JsIconSvgComponent,
-    RustIconSvgComponent,
-    FigmaIconSvgComponent,
-    ServiceIconOneComponent,
-    ServiceIconTwoComponent,
-    ServiceIconThreeComponent,
-    ServiceIconFourComponent,
-  ],
+  declarations: [DECLARATIONS],
   imports: [CommonModule],
-  exports: [
-    AwsSvgComponent,
-    AtlasLogoSvgComponent,
-    PromoSvgComponent,
-    GcpSvgComponent,
-    HeroSvgComponent,
-    AngularIconSvgComponent,
-    ReactIconSvgComponent,
-    TsIconSvgComponent,
-    ServiceIconFourComponent,
-    ServiceIconOneComponent,
-    ServiceIconThreeComponent,
-    ServiceIconTwoComponent,
-  ],
+  exports: [DECLARATIONS],
 })
 export class SvgModule {}
