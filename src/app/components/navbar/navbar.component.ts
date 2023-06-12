@@ -12,6 +12,8 @@ export class NavbarComponent implements OnInit {
   constructor(private readonly viewportService: ViewportService) {}
 
   ngOnInit(): void {
+    this.updateButtonSize();
+
     this.viewportService.resize$.subscribe(() => {
       this.updateButtonSize();
     });
