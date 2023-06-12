@@ -5,11 +5,7 @@ import {
   Output,
   forwardRef,
 } from '@angular/core';
-import {
-  ControlValueAccessor,
-  FormControl,
-  NG_VALUE_ACCESSOR,
-} from '@angular/forms';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-text-input',
@@ -25,9 +21,10 @@ import {
 })
 export class TextInputComponent {
   @Input() label?: string = 'Label Placeholder';
+  @Input() error?: boolean;
+  @Input() errorText?: string = '\u00A0';
 
   @Output() value = new EventEmitter<string>();
-
   onChange(value: string) {
     this.value.emit(value);
   }
