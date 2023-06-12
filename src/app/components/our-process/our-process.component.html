@@ -14,17 +14,11 @@
 
     <div class="flex flex-col justify-between items-center lg:flex-row gap-4">
       <app-process-card
-        text="Para descobrir o seu problema por meio de pesquisas e aprendizados"
-        title="Conversa"
-      />
-      <app-process-card
-        title="Mapeamento"
-        text="Para estruturar processos e solucionar o seu problema."
-      />
-      <app-process-card
-        title="Execução"
-        text="Para transformar nossas ideias em realidade."
-      />
+        *ngFor="let item of items"
+        [icon]="item.icon"
+        [title]="item.title"
+        [text]="item.text"
+      ></app-process-card>
     </div>
   </div>
 </section>

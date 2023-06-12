@@ -1,4 +1,9 @@
-<div class="bg-[#3C4661] rounded-lg flex flex-col p-5 gap-8 justify-center">
+<div
+  class="bg-[#3C4661] w-80 h-64 rounded-lg flex flex-col p-5 gap-4 justify-center items-center text-center"
+>
+  <div class="flex justify-center items-center text-6xl">
+    <ng-container *ngComponentOutlet="icon"></ng-container>
+  </div>
   <h5 class="font-bold text-white text-2xl">{{ title }}</h5>
   <p class="text-base text-white font-semibold leading-relaxed max-w-[28ch]">
     {{ text }}
