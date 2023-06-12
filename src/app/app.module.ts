@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { PagesModule } from './pages/pages.module';
 import { LandingLayoutModule } from './layouts/landing-layout/landing-layout.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ServicesModule } from './services/services.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -19,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     PagesModule,
     LandingLayoutModule,
     ReactiveFormsModule,
+    ServicesModule,
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
