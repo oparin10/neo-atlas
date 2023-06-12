@@ -16,6 +16,7 @@ import { ServiceIconTwoComponent } from './service-icon-two/service-icon-two.com
 import { ServiceIconThreeComponent } from './service-icon-three/service-icon-three.component';
 import { ServiceIconFourComponent } from './service-icon-four/service-icon-four.component';
 import { WhatsappIconComponent } from './whatsapp-icon/whatsapp-icon.component';
+import { ChatIconComponent } from './chat-icon/chat-icon.component';
 
 const DECLARATIONS = [
   AwsSvgComponent,
@@ -34,6 +35,7 @@ const DECLARATIONS = [
   ServiceIconThreeComponent,
   ServiceIconFourComponent,
   WhatsappIconComponent,
+  ChatIconComponent,
 ];
 
 @NgModule({
