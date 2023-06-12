@@ -4,7 +4,7 @@
 
 @layer components {
   .section-spacing {
-    @apply max-w-xs lg:max-w-5xl m-auto lg:my-24 my-16;
+    @apply max-w-xs md:max-w-lg lg:max-w-5xl m-auto lg:my-24 my-16;
   }
 }
 

@@ -1,16 +1,20 @@
 <section class="section-spacing">
-  <div class="lg:max-w-md flex flex-col gap-8">
-    <h1 class="text-xl font-black text-secondary-800">Mande uma mensagem</h1>
+  <div class="xl:max-w-md flex flex-col gap-8">
+    <h1 class="text-center lg:text-left text-xl font-black text-secondary-800">
+      Mande uma mensagem
+    </h1>
     <form
-      class="lg:px-10 lg:py-8 rounded-lg lg:shadow-centered grid lg:grid-cols-2 grid-flow-row gap-6"
+      class="bg-white lg:px-10 lg:py-8 rounded-lg lg:shadow-centered grid lg:grid-cols-2 grid-flow-row gap-6"
       action=""
     >
       <app-text-input [label]="'Nome'" />
       <app-text-input [label]="'Telefone'" />
       <app-text-input class="lg:col-span-2" [label]="'E-mail'" />
       <app-text-area class="lg:col-span-2" [label]="'Mensagem'" />
-      <div class="lg:col-span-2 lg:w-[50%] w-[75%]">
-        <app-button [attr.disabled]>Enviar</app-button>
+      <div class="lg:col-span-2 flex justify-center lg:justify-start">
+        <app-button class="lg:w-[50%] w-[75%]" [attr.disabled]
+          >Enviar</app-button
+        >
       </div>
     </form>
   </div>
