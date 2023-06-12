@@ -5,6 +5,7 @@ export type ContactCardType = {
   role?: string;
   picture?: string;
   alt?: string;
+  href?: string;
 };
 
 @Component({
@@ -17,4 +18,5 @@ export class ContactCardComponent {
   @Input() role? = 'Placeholder role';
   @Input() picture? = 'https://placehold.co/600x400';
   @Input() alt? = "AtlasCode's member picture";
+  @Input() href? = '#';
 }
