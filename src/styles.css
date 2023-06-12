@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .section-spacing {
+    @apply max-w-xs lg:max-w-5xl m-auto lg:my-24 my-16;
+  }
+}
+
 @layer base {
   html {
     font-family: "Nunito Sans", sans-serif;

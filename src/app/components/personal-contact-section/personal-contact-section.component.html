@@ -1,0 +1,18 @@
+<section class="section-spacing">
+  <div class="flex flex-col gap-8">
+    <h1 class="text-center lg:text-left text-secondary-700 text-xl font-black">
+      Fale diretamente conosco
+    </h1>
+    <div
+      class="place-items-center lg:place-items-start grid lg:grid-cols-2 grid-flow-row grid-cols-1 gap-5"
+    >
+      <app-contact-card
+        *ngFor="let contact of contactCards"
+        [alt]="contact.alt"
+        [name]="contact.name"
+        [role]="contact.role"
+        [picture]="contact.picture"
+      />
+    </div>
+  </div>
+</section>
