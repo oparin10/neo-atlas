@@ -18,6 +18,7 @@ import { ServiceIconFourComponent } from './service-icon-four/service-icon-four.
 import { WhatsappIconComponent } from './whatsapp-icon/whatsapp-icon.component';
 import { ChatIconComponent } from './chat-icon/chat-icon.component';
 import { PuzzleIconSvgComponent } from './puzzle-icon-svg/puzzle-icon-svg.component';
+import { RocketIconSvgComponent } from './rocket-icon-svg/rocket-icon-svg.component';
 
 const DECLARATIONS = [
   AwsSvgComponent,
@@ -38,6 +39,7 @@ const DECLARATIONS = [
   WhatsappIconComponent,
   ChatIconComponent,
   PuzzleIconSvgComponent,
+  RocketIconSvgComponent,
 ];
 
 @NgModule({
