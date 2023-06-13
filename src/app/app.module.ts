@@ -11,6 +11,7 @@ import { PagesModule } from './pages/pages.module';
 import { LandingLayoutModule } from './layouts/landing-layout/landing-layout.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ServicesModule } from './services/services.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -20,6 +21,8 @@ import { ServicesModule } from './services/services.module';
     PagesModule,
     LandingLayoutModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+
     ServicesModule,
   ],
   providers: [provideClientHydration()],

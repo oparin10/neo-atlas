@@ -26,6 +26,8 @@ import { PhoneNumberComponent } from './phone-number/phone-number.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactCardComponent } from './contact-card/contact-card.component';
 import { PersonalContactSectionComponent } from './personal-contact-section/personal-contact-section.component';
+import { ModalComponent } from './modal/modal.component';
+import { BackdropComponent } from './backdrop/backdrop.component';
 
 export function playerFactory() {
   return player;
@@ -51,6 +53,8 @@ const declarations = [
   PhoneNumberComponent,
   ContactCardComponent,
   PersonalContactSectionComponent,
+  ModalComponent,
+  BackdropComponent,
 ];
 
 @NgModule({

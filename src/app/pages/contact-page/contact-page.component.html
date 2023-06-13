@@ -10,4 +10,10 @@
       <app-contact-form />
     </div>
   </div>
+  <app-backdrop
+    (onCloseButtonClick)="toggleDialog()"
+    (onClick)="toggleDialog()"
+    [open]="dialogOpen"
+  >
+  </app-backdrop>
 </main>

@@ -1,0 +1,49 @@
+<div
+  #backdrop
+  [@fadeInOut]
+  (click)="onClick.emit()"
+  *ngIf="open"
+  class="w-screen h-screen backdrop-blur-md bg-slate-50/60 fixed z-10 top-0 left-0"
+>
+  <div class="w-full h-full flex justify-center items-center">
+    <div
+      (click)="$event.stopPropagation()"
+      class="gap-10 text-center h-auto w-80 px-8 py-10 bg-white rounded-xl shadow-centered flex flex-col"
+    >
+      <div class="text-green-600 text-[105px] flex justify-center items-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          width="1em"
+          height="1em"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      </div>
+      <h1 class="font-black text-secondary-800 text-2xl">
+        Obrigado pelo interesse.
+      </h1>
+
+      <h2 class="font-semibold text-secondary-700 text-lg">
+        Seu contato foi registrado com sucesso.
+      </h2>
+
+      <div class="flex justify-center items-center w-full">
+        <app-button
+          (click)="onCloseButtonClick.emit()"
+          class="w-[75%]"
+          [variant]="'outlined'"
+        >
+          Fechar
+        </app-button>
+      </div>
+    </div>
+  </div>
+</div>
