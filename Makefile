@@ -1,7 +1,7 @@
 .PHONY: run-dev start-db stop-db docker-stop-all
 
 run-dev:
-	dotnet run --project api.csproj
+	cd ./api && dotnet run --project api.csproj
 
 start-db:
 	docker-compose up -d

@@ -13,7 +13,7 @@ internal class Program
         var builder = WebApplication.CreateBuilder(args);
         var isDev = builder.Environment.IsDevelopment();
 
-        var env = isDev ? Api.Utils.DotEnv.Load("./.env.dev") : Api.Utils.DotEnv.Load("./env");
+        var env = isDev ? Api.Utils.DotEnv.Load("../.env.dev") : Api.Utils.DotEnv.Load("../.env");
 
         var conn = env["DB_CONNECTION_STRING"] ?? throw new Exception("DB_CONNECTION_STRING is not set");
 
