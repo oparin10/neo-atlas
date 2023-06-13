@@ -1,0 +1,6 @@
+{
+  "hosting": {
+    "public": "ui/dist/neo-atlas/browser",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}
