@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,8 @@ import { FormControl, FormGroup } from '@angular/forms';
   styles: [],
 })
 export class ContactFormComponent {
+  @Output() formSubmitted = new EventEmitter<(typeof this.form)['value']>();
+
   form = new FormGroup({
     name: new FormControl(''),
     phone: new FormControl(''),
@@ -15,6 +17,6 @@ export class ContactFormComponent {
   });
 
   onSubmit() {
-    console.log(this.form.value);
+    this.formSubmitted.emit(this.form.value);
   }
 }
