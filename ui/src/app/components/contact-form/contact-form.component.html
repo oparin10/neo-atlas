@@ -21,7 +21,11 @@
         [label]="'Mensagem'"
       />
       <div class="lg:col-span-2 flex justify-center lg:justify-start">
-        <app-button class="lg:w-[50%] w-[75%]">Enviar</app-button>
+        <app-button
+          [disabled]="form.status == 'INVALID'"
+          class="lg:w-[50%] w-[75%]"
+          >Enviar</app-button
+        >
       </div>
     </form>
   </div>

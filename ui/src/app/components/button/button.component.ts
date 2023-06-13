@@ -18,7 +18,13 @@ export class ButtonComponent {
 
   styles = variants;
   sizes = sizes;
+  states = states;
 }
+
+const states = {
+  disabled:
+    'cursor-not-allowed select-none pointer-events-none !bg-gray-300 !text-gray-400',
+};
 
 const sizes = {
   medium: 'text-sm py-2 px-10',

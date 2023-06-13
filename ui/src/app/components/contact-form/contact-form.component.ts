@@ -48,6 +48,7 @@ export class ContactFormComponent {
   });
 
   onSubmit() {
+    console.log(this.form);
     this.formSubmitted.emit(this.form.value);
   }
 }
