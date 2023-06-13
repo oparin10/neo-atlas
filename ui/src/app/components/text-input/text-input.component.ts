@@ -5,7 +5,7 @@ import {
   Output,
   forwardRef,
 } from '@angular/core';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-text-input',
@@ -19,13 +19,27 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
     },
   ],
 })
-export class TextInputComponent {
+export class TextInputComponent implements ControlValueAccessor {
+  value = '';
+
   @Input() label?: string = 'Label Placeholder';
   @Input() error?: boolean;
   @Input() errorText?: string = '\u00A0';
 
-  @Output() value = new EventEmitter<string>();
-  onChange(value: string) {
-    this.value.emit(value);
+  onChange: any = () => {};
+  onTouched: any = () => {};
+
+  writeValue(value: string): void {
+    this.value = value;
   }
+
+  registerOnChange(fn: any): void {
+    this.onChange = fn;
+  }
+
+  registerOnTouched(fn: any): void {
+    this.onTouched = fn;
+  }
+
+  setDisabledState(isDisabled: boolean): void {}
 }

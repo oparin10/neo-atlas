@@ -5,12 +5,21 @@
     </h1>
     <form
       class="bg-white lg:px-10 lg:py-8 rounded-lg lg:shadow-centered grid lg:grid-cols-2 grid-flow-row gap-6"
-      action=""
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
     >
-      <app-text-input [label]="'Nome'" />
-      <app-text-input [label]="'Telefone'" />
-      <app-text-input class="lg:col-span-2" [label]="'E-mail'" />
-      <app-text-area class="lg:col-span-2" [label]="'Mensagem'" />
+      <app-text-input formControlName="name" [label]="'Nome'" />
+      <app-text-input formControlName="phone" [label]="'Telefone'" />
+      <app-text-input
+        formControlName="email"
+        class="lg:col-span-2"
+        [label]="'E-mail'"
+      />
+      <app-text-area
+        formControlName="message"
+        class="lg:col-span-2"
+        [label]="'Mensagem'"
+      />
       <div class="lg:col-span-2 flex justify-center lg:justify-start">
         <app-button class="lg:w-[50%] w-[75%]">Enviar</app-button>
       </div>

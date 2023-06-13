@@ -6,23 +6,15 @@ import { FormControl, FormGroup } from '@angular/forms';
   templateUrl: './contact-form.component.html',
   styles: [],
 })
-export class ContactFormComponent implements OnInit {
-  form!: FormGroup;
+export class ContactFormComponent {
+  form = new FormGroup({
+    name: new FormControl(''),
+    phone: new FormControl(''),
+    email: new FormControl(''),
+    message: new FormControl(''),
+  });
 
-  ngOnInit(): void {
-    this.form = this.createForm();
-  }
-  createForm(): FormGroup<{
-    name: FormControl<string | null>;
-    phone: FormControl<string | null>;
-    email: FormControl<string | null>;
-    message: FormControl<string | null>;
-  }> {
-    return new FormGroup({
-      name: new FormControl(''),
-      phone: new FormControl(''),
-      email: new FormControl(''),
-      message: new FormControl(''),
-    });
+  onSubmit() {
+    console.log(this.form.value);
   }
 }
