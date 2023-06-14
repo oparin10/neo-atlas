@@ -51,6 +51,17 @@ export class ContactFormComponent {
     ]),
   });
 
+  justLog(value: string) {
+    console.log(value);
+  }
+
+  onPhoneChange(value: string) {
+    console.log(value);
+    // this.form.get('phone')?.setValue(value);
+
+    this.form.controls.phone.setValue(value);
+  }
+
   onSubmit() {
     console.log(this.form);
     this.formSubmitted.emit(this.form.value);

@@ -8,11 +8,11 @@
       [formGroup]="form"
       (ngSubmit)="onSubmit()"
     >
-      <input appPhoneMask />
       <app-text-input formControlName="name" [label]="'Nome'" />
       <app-text-input
-        appPhoneMask
         formControlName="phone"
+        (onValueChange)="onPhoneChange($event.maskedValue)"
+        appPhoneMask
         [label]="'Telefone'"
       />
       <app-text-input
