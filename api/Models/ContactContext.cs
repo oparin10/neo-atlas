@@ -7,5 +7,6 @@ public class ContactContext : DbContext
 
     public ContactContext(DbContextOptions<ContactContext> options) : base(options) { }
 
-    public DbSet<ContactItem> ContactItems { get; set; } = null!;
+
+    public DbSet<ContactItem> Contacts { get; set; } = null!;
 }

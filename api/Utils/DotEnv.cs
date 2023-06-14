@@ -15,12 +15,16 @@ public static class DotEnv
 
         foreach (var line in File.ReadAllLines(path))
         {
-            var splitted = line.Split('=', StringSplitOptions.RemoveEmptyEntries);
 
-            if (splitted.Length == 2)
+            var parts = line.Split('=', 2, StringSplitOptions.TrimEntries);
+
+            if (parts.Length != 2)
             {
-                result.Add(splitted[0], splitted[1]);
+                continue;
             }
+
+            result[parts[0]] = parts[1];
+
         }
 
         return result;
