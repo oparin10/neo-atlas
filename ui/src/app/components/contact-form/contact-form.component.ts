@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 // regex pattern (99) 9-9999-9999
@@ -28,13 +28,10 @@ export class ContactFormComponent {
   });
 
   onPhoneChange(value: string) {
-    console.log(value);
-
-    this.form.get('phone')?.setValue(value);
+    this.form.controls.phone.patchValue(value);
   }
 
   onSubmit() {
-    console.log(this.form);
     this.formSubmitted.emit(this.form.value);
   }
 }
