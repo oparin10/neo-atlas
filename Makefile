@@ -4,10 +4,10 @@ run-dev:
 	cd ./api && dotnet run --project api.csproj
 
 start-db:
-	docker-compose up -d
+	docker-compose -f ./containers/api/docker-compose.yaml up -d
 
 stop-db:
-	docker-compose down
+	docker-compose -f ./containers/api/docker-compose.yaml down
 
 api-dev: start-db run-dev
 

@@ -16,9 +16,15 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
+    links:
+      - db
     restart: always
     environment:
       PMA_HOST: db
       PMA_PORT: 3306
+      PMA_ARBITRARY: 1
     ports:
       - 8080:80
+
+volumes:
+  mysql_data:
