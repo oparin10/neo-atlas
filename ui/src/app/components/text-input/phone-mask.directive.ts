@@ -24,13 +24,25 @@ export const maskPhoneNumber = (val: string): string => {
 export class PhoneMaskDirective {
   constructor(private el: ElementRef<HTMLInputElement>) {}
 
+  lastKey = '';
+
   @Output() onValueChange = new EventEmitter<{
     value: string;
     maskedValue: string;
   }>();
 
+  @HostListener('keydown', ['$event'])
+  onKeyDown(event: KeyboardEvent) {
+    this.lastKey = event.key;
+  }
+
   @HostListener('input', ['$event.target.value'])
   onInput(value: string) {
+    if (this.lastKey === 'Backspace') {
+      this.lastKey = '';
+      return;
+    }
+
     const maskedValue = maskPhoneNumber(value);
 
     this.onValueChange.emit({ value: value, maskedValue: maskedValue });

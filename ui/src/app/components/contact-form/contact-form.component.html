@@ -16,10 +16,11 @@
         [label]="'Nome'"
       />
       <app-text-input
+        [value]="form.controls.phone.value ?? ''"
         [label]="'Telefone'"
         [error]="form.controls.phone.invalid && form.controls.phone.touched"
         [errorText]="'Telefone inválido'"
-        (onValueChange)="onPhoneChange($event.maskedValue)"
+        (onValueChange)="onPhoneChange($event)"
         formControlName="phone"
         appPhoneMask
       />

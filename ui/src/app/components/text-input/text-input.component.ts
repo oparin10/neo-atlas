@@ -13,7 +13,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ],
 })
 export class TextInputComponent implements ControlValueAccessor {
-  public value = '';
+  @Input() value = '';
   public isDisabled = false;
   public changed: (value: string) => void = () => {};
   public touched: (event: Event) => void = () => {};

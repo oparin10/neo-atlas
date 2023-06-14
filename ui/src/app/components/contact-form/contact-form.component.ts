@@ -37,8 +37,11 @@ export class ContactFormComponent {
     message: new FormControl('', []),
   });
 
-  onPhoneChange(value: string) {
-    this.form.controls.phone.patchValue(value);
+  onPhoneChange(value: { maskedValue: string; value: string }) {
+    console.log('masked', value.maskedValue);
+    console.log('unmasked', value.value);
+
+    this.form.controls.phone.patchValue(value.maskedValue);
   }
 
   onSubmit() {
