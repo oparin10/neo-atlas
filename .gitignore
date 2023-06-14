@@ -129,3 +129,7 @@ node_modules/
 .env
 
 ui/node_modules
+
+
+# docker volume stuff
+mysql_data
