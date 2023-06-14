@@ -1,25 +1,28 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
 
+export const maskPhoneNumber = (val: string): string => {
+  const v = val.replace(/\D/g, '').slice(0, 11);
+  if (v.length > 7) {
+    return `(${v.slice(0, 2)}) ${v.slice(2, 3)}-${v.slice(3, 7)}-${v.slice(7)}`;
+  } else if (v.length > 3) {
+    return `(${v.slice(0, 2)}) ${v.slice(2, 3)}-${v.slice(3)}`;
+  } else if (v.length > 2) {
+    return `(${v.slice(0, 2)}) ${v.slice(2)}`;
+  }
+  return v;
+};
+
 @Directive({
   selector: '[appPhoneMask]',
 })
 export class PhoneMaskDirective {
-  private pattern = /^\(\d{2}\)\s\d-\d{4}-\d{4}$/;
-
-  constructor(private el: ElementRef) {}
+  constructor(private el: ElementRef<HTMLInputElement>) {}
 
   @HostListener('input', ['$event.target.value'])
   onInput(value: string) {
-    const maskedValue = value
-      .replace(/\D/g, '') // remove non-digits
-      .slice(0, 11) // limit to 11 digits
-      .replace(/^(\d{2})(\d)/g, '($1) $2') // add parentheses and space after first two digits
-      .replace(/(\d)(\d{4})$/, '$1-$2'); // add dash before last four digits
+    this.el.nativeElement.value = value;
 
-    if (this.pattern.test(maskedValue)) {
-      this.el.nativeElement.value = maskedValue;
-    } else {
-      this.el.nativeElement.value = '';
-    }
+    const maskedValue = maskPhoneNumber(value);
+    this.el.nativeElement.value = maskedValue;
   }
 }

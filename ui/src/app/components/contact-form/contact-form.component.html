@@ -8,8 +8,13 @@
       [formGroup]="form"
       (ngSubmit)="onSubmit()"
     >
+      <input appPhoneMask />
       <app-text-input formControlName="name" [label]="'Nome'" />
-      <app-text-input formControlName="phone" [label]="'Telefone'" />
+      <app-text-input
+        appPhoneMask
+        formControlName="phone"
+        [label]="'Telefone'"
+      />
       <app-text-input
         formControlName="email"
         class="lg:col-span-2"
