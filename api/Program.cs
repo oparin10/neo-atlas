@@ -1,6 +1,4 @@
-using Microsoft.EntityFrameworkCore;
-using Api.Models;
-using Api.Services;
+using Api;
 
 internal class Program
 {
@@ -10,30 +8,10 @@ internal class Program
         var builder = WebApplication.CreateBuilder(args);
         var isDev = builder.Environment.IsDevelopment();
 
-        var env = isDev ? Api.Utils.DotEnv.Load("../.env.dev") : Api.Utils.DotEnv.Load("../.env");
-
-        var _conn = env["DB_CONNECTION_STRING"] ?? throw new Exception("DB_CONNECTION_STRING is not set");
-
-
-        builder.Services.AddControllers();
-        builder.Services.AddDbContext<ContactContext>(opt =>
-        {
-            opt.UseMySql(ServerVersion.AutoDetect(_conn))
-                .LogTo(Console.WriteLine, LogLevel.Information)
-                .EnableSensitiveDataLogging()
-                .EnableDetailedErrors()
-            ;
-        });
-
-        builder.Services.AddScoped<IContactService, ContactService>();
-
-
-        builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
+        var config = new AppConfiguration(builder);
 
 
         var app = builder.Build();
-
 
         if (isDev)
         {
