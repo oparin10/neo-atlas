@@ -14,6 +14,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class TextInputComponent implements ControlValueAccessor {
   value = '';
+  disabled = false;
 
   @Input() label?: string = 'Label Placeholder';
   @Input() error?: boolean;
@@ -34,5 +35,7 @@ export class TextInputComponent implements ControlValueAccessor {
     this.onTouched = fn;
   }
 
-  setDisabledState(isDisabled: boolean): void {}
+  setDisabledState(isDisabled: boolean): void {
+    this.disabled = isDisabled;
+  }
 }
