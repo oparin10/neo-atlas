@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace Api.Utils;
 
 public static class DotEnv
@@ -13,7 +15,7 @@ public static class DotEnv
             throw new FileNotFoundException("");
         }
 
-        foreach (var line in File.ReadAllLines(path))
+        foreach (var line in File.ReadAllLines(path, Encoding.UTF8))
         {
 
             var parts = line.Split('=', 2, StringSplitOptions.TrimEntries);

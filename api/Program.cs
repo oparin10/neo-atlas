@@ -1,8 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Api.Models;
-
-
-
+using MySqlConnector;
 
 internal class Program
 {
@@ -14,12 +12,13 @@ internal class Program
 
         var env = isDev ? Api.Utils.DotEnv.Load("../.env.dev") : Api.Utils.DotEnv.Load("../.env");
 
-        var conn = env["DB_CONNECTION_STRING"] ?? throw new Exception("DB_CONNECTION_STRING is not set");
+        var _conn = env["DB_CONNECTION_STRING"] ?? throw new Exception("DB_CONNECTION_STRING is not set");
+
 
         builder.Services.AddControllers();
         builder.Services.AddDbContext<ContactContext>(opt =>
         {
-            opt.UseMySql(ServerVersion.AutoDetect(conn))
+            opt.UseMySql(ServerVersion.AutoDetect(_conn))
                 .LogTo(Console.WriteLine, LogLevel.Information)
                 .EnableSensitiveDataLogging()
                 .EnableDetailedErrors()
