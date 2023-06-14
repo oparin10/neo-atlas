@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormSubmissionResult } from 'src/app/components/contact-form/contact-form.types';
 
 @Component({
   selector: 'app-contact-page',
@@ -12,12 +13,14 @@ export class ContactPageComponent {
     this.dialogOpen = !this.dialogOpen;
   }
 
-  onSubmit(event: 'success' | 'error') {
-    if (event === 'success') {
+  onSubmit(event: FormSubmissionResult) {
+    if (event.type === 'success') {
+      console.log(event.response);
       this.toggleDialog();
     } else {
-      console.log(
-        'Ocorreu um erro ao enviar o formulário, tente novamente mais tarde.'
+      console.error(
+        'Ocorreu um erro ao enviar o formulário, tente novamente mais tarde.',
+        event.error
       );
     }
   }
