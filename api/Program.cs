@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Api.Models;
-using MySqlConnector;
+using Api.Services;
 
 internal class Program
 {
@@ -24,6 +24,8 @@ internal class Program
                 .EnableDetailedErrors()
             ;
         });
+
+        builder.Services.AddScoped<IContactService, ContactService>();
 
 
         builder.Services.AddEndpointsApiExplorer();
