@@ -11,4 +11,14 @@ export class ContactPageComponent {
   toggleDialog() {
     this.dialogOpen = !this.dialogOpen;
   }
+
+  onSubmit(event: 'success' | 'error') {
+    if (event === 'success') {
+      this.toggleDialog();
+    } else {
+      console.log(
+        'Ocorreu um erro ao enviar o formulário, tente novamente mais tarde.'
+      );
+    }
+  }
 }

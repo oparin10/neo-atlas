@@ -12,6 +12,7 @@ import { LandingLayoutModule } from './layouts/landing-layout/landing-layout.mod
 import { ReactiveFormsModule } from '@angular/forms';
 import { ServicesModule } from './services/services.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -22,8 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LandingLayoutModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-
     ServicesModule,
+    HttpClientModule,
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],

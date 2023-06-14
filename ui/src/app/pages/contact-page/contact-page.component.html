@@ -7,7 +7,7 @@
     <div
       class="lg:justify-self-end md:justify-self-stretch lg:order-1 order-none"
     >
-      <app-contact-form />
+      <app-contact-form (onFormSubmit)="onSubmit($event)" />
     </div>
   </div>
   <app-backdrop
