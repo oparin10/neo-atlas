@@ -13,29 +13,37 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ],
 })
 export class TextInputComponent implements ControlValueAccessor {
-  value = '';
-  disabled = false;
+  public value = '';
+  public isDisabled = false;
+  public changed: (value: string) => void = () => {};
+  public touched: (event: Event) => void = () => {};
 
   @Input() label?: string = 'Label Placeholder';
   @Input() error?: boolean;
   @Input() errorText?: string = '\u00A0';
 
-  onChange: any = () => {};
-  onTouched: any = () => {};
+  onChange(event: Event) {
+    const value = (event.target as HTMLInputElement)?.value;
+    this.changed(value);
+  }
+
+  onBlur(event: Event) {
+    this.touched(event);
+  }
 
   writeValue(value: string): void {
     this.value = value;
   }
 
   registerOnChange(fn: any): void {
-    this.onChange = fn;
+    this.changed = fn;
   }
 
   registerOnTouched(fn: any): void {
-    this.onTouched = fn;
+    this.touched = fn;
   }
 
   setDisabledState(isDisabled: boolean): void {
-    this.disabled = isDisabled;
+    this.isDisabled = isDisabled;
   }
 }

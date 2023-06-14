@@ -8,14 +8,24 @@
       [formGroup]="form"
       (ngSubmit)="onSubmit()"
     >
-      <app-text-input formControlName="name" [label]="'Nome'" />
       <app-text-input
-        formControlName="phone"
-        (onValueChange)="onPhoneChange($event.maskedValue)"
-        appPhoneMask
-        [label]="'Telefone'"
+        id="name"
+        [error]="form.controls.name.invalid && form.controls.name.touched"
+        [errorText]="'Nome inválido'"
+        formControlName="name"
+        [label]="'Nome'"
       />
       <app-text-input
+        [label]="'Telefone'"
+        [error]="form.controls.phone.invalid && form.controls.phone.touched"
+        [errorText]="'Telefone inválido'"
+        (onValueChange)="onPhoneChange($event.maskedValue)"
+        formControlName="phone"
+        appPhoneMask
+      />
+      <app-text-input
+        [error]="form.controls.email.invalid && form.controls.email.touched"
+        [errorText]="'E-mail inválido'"
         formControlName="email"
         class="lg:col-span-2"
         [label]="'E-mail'"
