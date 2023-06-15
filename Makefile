@@ -1,4 +1,4 @@
-.PHONY: run-dev db-up db-down docker-stop-all ui-dev
+.PHONY: run-dev db-up db-down docker-stop-all ui-dev env-encrypt env-decrypt
 
 run-dev:
 	cd ./api && dotnet run --project api.csproj
@@ -16,3 +16,21 @@ docker-stop-all:
 
 ui-dev:
 	cd ./ui && ng serve
+
+env-encrypt:
+	gcloud kms encrypt \
+	--plaintext-file=.env \
+	--ciphertext-file=.env.enc \
+	--location=global \
+	--keyring=main \
+	--key=core \
+	--project=neo-atlas-v2
+
+env-decrypt:
+	gcloud kms decrypt \
+	--plaintext-file=.env \
+	--ciphertext-file=.env.enc \
+	--location=global \
+	--keyring=main \
+	--key=core \
+	--project=neo-atlas-v2
