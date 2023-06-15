@@ -25,7 +25,7 @@ public static class DotEnv
                 continue;
             }
 
-            result[parts[0]] = parts[1];
+            result[parts[0].Replace("\"", "")] = parts[1].Replace("\"", "");
 
         }
 
