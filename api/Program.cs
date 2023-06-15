@@ -10,6 +10,9 @@ internal class Program
 
         var config = new AppConfiguration(builder);
 
+        config.ConfigureDatabase();
+        config.ConfigureServices();
+
 
         var app = builder.Build();
 
