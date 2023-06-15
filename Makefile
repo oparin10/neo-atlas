@@ -1,4 +1,12 @@
-.PHONY: run-dev db-up db-down docker-stop-all ui-dev env-encrypt env-decrypt
+.PHONY: run-dev db-up db-down docker-stop-all ui-dev env-encrypt env-decrypt ui-build ui-deploy
+
+ui-build:
+	cd ./ui && ng build
+
+ui-deploy: ui-build
+	firebase deploy --only hosting
+
+
 
 run-dev:
 	cd ./api && dotnet run --project api.csproj
