@@ -1,6 +1,5 @@
-using Microsoft.EntityFrameworkCore;
-using Api.Models;
 using Api.Services;
+using Api.Context;
 
 namespace Api;
 
@@ -26,14 +25,7 @@ public class AppConfiguration
     {
         var conn = GetConnectionString();
 
-        _builder.Services.AddDbContext<ContactContext>(opt =>
-        {
-            opt.UseMySql(ServerVersion.AutoDetect(conn))
-                .LogTo(Console.WriteLine, LogLevel.Information)
-                .EnableSensitiveDataLogging()
-                .EnableDetailedErrors()
-            ;
-        });
+        _builder.Services.AddDbContext<WebsiteContext>();
     }
 
     private bool IsDev()
