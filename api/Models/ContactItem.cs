@@ -1,4 +1,3 @@
-
 namespace Api.Models;
 
 public class ContactItem
