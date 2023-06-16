@@ -1,3 +1,4 @@
+using Api.Context;
 using Api.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,10 +12,10 @@ public interface IContactService
 
 public class ContactService : IContactService
 {
-    private readonly ContactContext _dbContext;
+    private readonly WebsiteContext _dbContext;
 
 
-    public ContactService(ContactContext context)
+    public ContactService(WebsiteContext context)
     {
         _dbContext = context;
     }
