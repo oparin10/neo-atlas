@@ -1,6 +1,7 @@
 using Api.Context;
 using Api.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Api.Services;
 
@@ -8,6 +9,8 @@ public interface IContactService
 {
     Task<ActionResult<ContactItem>> CreateContact(ContactItem contact);
     Task<ActionResult<ContactItem>?> GetContactItem(long id);
+
+    Task<ActionResult<IEnumerable<ContactItem?>>> GetContactItems();
 }
 
 public class ContactService : IContactService
@@ -38,5 +41,10 @@ public class ContactService : IContactService
 
 
         return contact;
+    }
+
+    public async Task<ActionResult<IEnumerable<ContactItem?>>> GetContactItems()
+    {
+        return await _dbContext.Contacts.ToListAsync();
     }
 }
