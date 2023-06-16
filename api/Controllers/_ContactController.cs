@@ -6,7 +6,7 @@ namespace Api.Controllers;
 
 
 [ApiController]
-[Route("api/contacts")]
+[Route("api/_contacts")]
 public class _ContactsController : ControllerBase
 {
 
@@ -21,17 +21,20 @@ public class _ContactsController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<ContactItem>> CreateContact(ContactItem contact)
     {
-        var createdContact = _contactService.CreateContact(contact);
+        var createdContact = await _contactService.CreateContact(contact);
+
+
 
         return Ok(createdContact);
     }
 
 
+
     [HttpGet("{id}")]
-    public ActionResult<ContactItem> GetContact(long id)
+    public async Task<ActionResult<ContactItem>> GetContact(long id)
     {
 
-        var contact = _contactService.GetContactItem(id);
+        var contact = await _contactService.GetContactItem(id);
 
         if (contact == null)
         {
