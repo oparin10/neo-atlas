@@ -19,7 +19,7 @@ public class _ContactsController : ControllerBase
 
 
     [HttpPost]
-    public ActionResult<ContactItem> CreateContact(ContactItem contact)
+    public async Task<ActionResult<ContactItem>> CreateContact(ContactItem contact)
     {
         var createdContact = _contactService.CreateContact(contact);
 

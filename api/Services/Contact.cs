@@ -1,11 +1,12 @@
 using Api.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Services;
 
 public interface IContactService
 {
-    ContactItem CreateContact(ContactItem contact);
-    ContactItem? GetContactItem(long id);
+    Task<ActionResult<ContactItem>> CreateContact(ContactItem contact);
+    Task<ActionResult<ContactItem>?> GetContactItem(long id);
 }
 
 public class ContactService : IContactService
@@ -18,16 +19,21 @@ public class ContactService : IContactService
         _dbContext = context;
     }
 
-    public ContactItem CreateContact(ContactItem contact)
+    public async Task<ActionResult<ContactItem>> CreateContact(ContactItem contact)
     {
-        _dbContext.Contacts.Add(contact);
-        _dbContext.SaveChanges();
+        await _dbContext.Contacts.AddAsync(contact);
+        await _dbContext.SaveChangesAsync();
         return contact;
     }
 
-    public ContactItem? GetContactItem(long id)
+    public async Task<ActionResult<ContactItem>?> GetContactItem(long id)
     {
-        var contact = _dbContext.Contacts.FirstOrDefault(c => c.Id == id);
+        var contact = await _dbContext.Contacts.FindAsync(id);
+
+        if (contact == null)
+        {
+            return null;
+        }
 
 
         return contact;
