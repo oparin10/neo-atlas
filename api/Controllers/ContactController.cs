@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Api.Models;
+using Api.Context;
 
 namespace api.Controllers
 {
@@ -13,9 +14,9 @@ namespace api.Controllers
     [ApiController]
     public class ContactController : ControllerBase
     {
-        private readonly ContactContext _context;
+        private readonly WebsiteContext _context;
 
-        public ContactController(ContactContext context)
+        public ContactController(WebsiteContext context)
         {
             _context = context;
         }
@@ -24,10 +25,10 @@ namespace api.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ContactItem>>> GetContacts()
         {
-          if (_context.Contacts == null)
-          {
-              return NotFound();
-          }
+            if (_context.Contacts == null)
+            {
+                return NotFound();
+            }
             return await _context.Contacts.ToListAsync();
         }
 
@@ -35,10 +36,10 @@ namespace api.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ContactItem>> GetContactItem(long id)
         {
-          if (_context.Contacts == null)
-          {
-              return NotFound();
-          }
+            if (_context.Contacts == null)
+            {
+                return NotFound();
+            }
             var contactItem = await _context.Contacts.FindAsync(id);
 
             if (contactItem == null)
@@ -85,10 +86,10 @@ namespace api.Controllers
         [HttpPost]
         public async Task<ActionResult<ContactItem>> PostContactItem(ContactItem contactItem)
         {
-          if (_context.Contacts == null)
-          {
-              return Problem("Entity set 'ContactContext.Contacts'  is null.");
-          }
+            if (_context.Contacts == null)
+            {
+                return Problem("Entity set 'ContactContext.Contacts'  is null.");
+            }
             _context.Contacts.Add(contactItem);
             await _context.SaveChangesAsync();
 

@@ -25,5 +25,5 @@ public partial class WebsiteContext : DbContext
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 
-    public DbSet<ContactItem> ContactItems { get; set; } = null!;
+    public DbSet<ContactItem> Contacts { get; set; } = null!;
 }
