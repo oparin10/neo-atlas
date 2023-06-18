@@ -26,6 +26,7 @@ public class AppConfiguration
         var conn = GetConnectionString();
 
         _builder.Services.AddDbContext<WebsiteContext>();
+        _builder.Services.AddDbContext<DashboardContext>();
     }
 
     private bool IsDev()
