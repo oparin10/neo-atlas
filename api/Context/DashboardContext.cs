@@ -6,7 +6,7 @@ namespace Api.Context;
 
 public partial class DashboardContext : BaseDbContext
 {
-    public DashboardContext(DbContextOptions<BaseDbContext> options) : base(options)
+    public DashboardContext(DbContextOptions<DashboardContext> options) : base(options)
     {
     }
 
