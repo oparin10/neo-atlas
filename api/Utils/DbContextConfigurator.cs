@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Api.Constants;
 
 
 namespace Api.Utils;
@@ -15,7 +16,7 @@ public class MySQLContextOptionsConfigurator : IDBContextOptionsConfigurator
     {
         var env = DotEnv.Load("../.env.dev");
 
-        var _conn = env["DB_CONNECTION_STRING"] ?? throw new Exception("DB_CONNECTION_STRING is not set");
+        var _conn = env[DatabaseConstants.ConnectionString] ?? throw new Exception("DB_CONNECTION_STRING is not set");
 
         return _conn;
     }
