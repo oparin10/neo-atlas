@@ -3,14 +3,30 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Api.Utils;
 
-public static class DbContextConfigurator
+interface IDBContextOptionsConfigurator
+{
+    void Configure(DbContextOptionsBuilder options);
+}
+
+public class MySQLContextOptionsConfigurator : IDBContextOptionsConfigurator
 {
 
-    public static void Configure(DbContextOptionsBuilder options)
+    private static string GetConnectionString()
+    {
+        var env = DotEnv.Load("../.env.dev");
+
+        var _conn = env["DB_CONNECTION_STRING"] ?? throw new Exception("DB_CONNECTION_STRING is not set");
+
+        return _conn;
+    }
+
+    public void Configure(DbContextOptionsBuilder options)
     {
         if (!options.IsConfigured)
         {
-            options.UseMySql("server=localhost;user=root;password=root;database=db", ServerVersion.Parse("11.0.2-mariadb"));
+            var conn = GetConnectionString();
+
+            options.UseMySql(conn, ServerVersion.Parse("11.0.2-mariadb"));
         }
     }
 }
