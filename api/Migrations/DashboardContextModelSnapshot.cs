@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace api.Migrations.Dashboard
+namespace api.Migrations
 {
     [DbContext(typeof(DashboardContext))]
     partial class DashboardContextModelSnapshot : ModelSnapshot

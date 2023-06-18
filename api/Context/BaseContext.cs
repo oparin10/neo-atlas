@@ -1,17 +1,27 @@
 
+using Api.Utils;
 using Microsoft.EntityFrameworkCore;
 
 namespace Api.Context;
 
 public abstract partial class BaseDbContext : DbContext
 {
-    public BaseDbContext(DbContextOptions<BaseDbContext> options) : base(options) { }
+    private readonly IDBContextOptionsConfigurator Configurator = new MySQLContextOptionsConfigurator();
+
+    public BaseDbContext(DbContextOptions<BaseDbContext> options, IDBContextOptionsConfigurator configurator) : base(options)
+    {
+        Configurator = configurator;
+    }
 
     // https://github.com/dotnet/efcore/issues/7533#issuecomment-353669263
-    protected BaseDbContext(DbContextOptions options) : base(options) { }
+    protected BaseDbContext(DbContextOptions options) : base(options)
+    {
+    }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseMySql("server=localhost;user=root;password=root;database=db", ServerVersion.Parse("11.0.2-mariadb"));
+    {
+        Configurator.Configure(optionsBuilder);
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

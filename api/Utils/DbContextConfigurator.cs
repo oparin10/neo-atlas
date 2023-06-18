@@ -4,11 +4,6 @@ using Api.Constants;
 
 namespace Api.Utils;
 
-interface IDBContextOptionsConfigurator
-{
-    void Configure(DbContextOptionsBuilder options);
-}
-
 public class MySQLContextOptionsConfigurator : IDBContextOptionsConfigurator
 {
 
