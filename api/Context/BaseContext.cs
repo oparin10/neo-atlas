@@ -6,11 +6,11 @@ namespace Api.Context;
 
 public abstract partial class BaseDbContext : DbContext
 {
-    private readonly IDBContextOptionsConfigurator Configurator = new MySQLContextOptionsConfigurator();
+    private readonly IWebHostEnvironment _env = null!;
 
-    public BaseDbContext(DbContextOptions<BaseDbContext> options, IDBContextOptionsConfigurator configurator) : base(options)
+    public BaseDbContext(DbContextOptions<BaseDbContext> options, IWebHostEnvironment env) : base(options)
     {
-        Configurator = configurator;
+        _env = env;
     }
 
     // https://github.com/dotnet/efcore/issues/7533#issuecomment-353669263
@@ -20,7 +20,12 @@ public abstract partial class BaseDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        Configurator.Configure(optionsBuilder);
+        if (!optionsBuilder.IsConfigured)
+        {
+            var configurator = new MySQLContextOptionsConfigurator();
+
+            configurator.Configure(optionsBuilder, _env);
+        }
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

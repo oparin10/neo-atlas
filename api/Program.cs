@@ -8,6 +8,7 @@ internal class Program
         var builder = WebApplication.CreateBuilder(args);
         var isDev = builder.Environment.IsDevelopment();
 
+
         var config = new AppConfiguration(builder);
 
         config.ConfigureDatabase();

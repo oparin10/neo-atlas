@@ -4,14 +4,9 @@ namespace Api.Utils;
 
 public static class DotEnv
 {
-
-
     public static void Load(string path)
     {
-        Parse(path, (key, value) =>
-        {
-            Environment.SetEnvironmentVariable(key, value);
-        });
+        Parse(path, Environment.SetEnvironmentVariable);
     }
 
     public static IDictionary<string, string> Read(string path)

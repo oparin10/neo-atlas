@@ -5,5 +5,5 @@ namespace Api.Utils;
 
 public interface IDBContextOptionsConfigurator
 {
-    void Configure(DbContextOptionsBuilder options);
+    void Configure(DbContextOptionsBuilder options, IWebHostEnvironment env);
 }

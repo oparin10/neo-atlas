@@ -7,20 +7,31 @@ namespace Api.Utils;
 public class MySQLContextOptionsConfigurator : IDBContextOptionsConfigurator
 {
 
-    private static string GetConnectionString()
+    private static string GetConnectionString(IWebHostEnvironment env)
     {
-        var env = DotEnv.Read("../.env.dev");
+        IDictionary<string, string> dotenv;
 
-        var _conn = env[DatabaseConstants.ConnectionString] ?? throw new Exception("DB_CONNECTION_STRING is not set");
+        if (env.IsDevelopment())
+        {
+
+            dotenv = DotEnv.Read("../.env.dev");
+        }
+        else
+        {
+            dotenv = DotEnv.Read("../.env");
+        }
+
+
+        var _conn = dotenv[DatabaseConstants.ConnectionString] ?? throw new Exception("DB_CONNECTION_STRING is not set");
 
         return _conn;
     }
 
-    public void Configure(DbContextOptionsBuilder options)
+    public void Configure(DbContextOptionsBuilder options, IWebHostEnvironment env)
     {
         if (!options.IsConfigured)
         {
-            var conn = GetConnectionString();
+            var conn = GetConnectionString(env);
 
             options.UseMySql(conn, ServerVersion.Parse("11.0.2-mariadb"));
         }
