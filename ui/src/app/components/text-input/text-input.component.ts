@@ -22,6 +22,16 @@ export class TextInputComponent implements ControlValueAccessor {
   @Input() error?: boolean;
   @Input() errorText?: string = '\u00A0';
 
+  public inputId: string;
+
+  constructor() {
+    this.inputId = this.generateUniqueId();
+  }
+
+  private generateUniqueId() {
+    return Math.random().toString(36).substring(2);
+  }
+
   onChange(event: Event) {
     const value = (event.target as HTMLInputElement)?.value;
     this.changed(value);
