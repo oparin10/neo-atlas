@@ -4,9 +4,10 @@ import { ComponentsModule } from '../components/components.module';
 import { SvgModule } from '../svg/svg.module';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
-  declarations: [LandingPageComponent, ContactPageComponent],
+  declarations: [LandingPageComponent, ContactPageComponent, LoginPageComponent],
   imports: [CommonModule, ComponentsModule, SvgModule],
   exports: [LandingPageComponent, ContactPageComponent],
 })
