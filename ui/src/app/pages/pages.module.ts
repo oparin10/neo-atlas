@@ -7,8 +7,12 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
-  declarations: [LandingPageComponent, ContactPageComponent, LoginPageComponent],
+  declarations: [
+    LandingPageComponent,
+    ContactPageComponent,
+    LoginPageComponent,
+  ],
   imports: [CommonModule, ComponentsModule, SvgModule],
-  exports: [LandingPageComponent, ContactPageComponent],
+  exports: [LandingPageComponent, ContactPageComponent, LoginPageComponent],
 })
 export class PagesModule {}
