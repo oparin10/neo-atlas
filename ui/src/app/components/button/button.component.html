@@ -1,9 +1,9 @@
 <button
   (click)="click.emit($event)"
   [disabled]="disabled"
-  class="{{ styles.base }}  {{ disabled ? states.disabled : '' }} {{
-    sizes[size]
-  }} {{ styles[variant] }}"
+  class="{{ styles.base }} {{ sizes[size] }} {{ styles[variant] }} {{
+    disabled && states.disabled
+  }}  {{ class }} "
 >
   <ng-content></ng-content>
 </button>
