@@ -1,1 +1,54 @@
-<p>login-page works!</p>
+<main class="bg-[#e5e8f0] h-screen w-screen flex items-center justify-center">
+  <div class="absolute __bg-gradient w-full h-full">
+    <div
+      class="__paper-gradient bg-white border-[3px] border-solid border-white max-w-lg w-[90%] h-[95%] relative md:h-[80%] xl-h-[65%] p-1 rounded-lg"
+    >
+      <!-- inner grid -->
+      <div class="grid h-full grid-cols-1 md:grid-cols-2">
+        <div
+          class="rounded-lg h-full w-full bg-[#7bacff17] hidden text-[15rem] invisible md:flex md:visible md:justify-center md:items-center"
+        >
+          <span>Logo here</span>
+        </div>
+      </div>
+      <!-- inner grid ends -->
+
+      <!-- form -->
+      <div
+        class="w-[75%] m-auto relative flex justify-center items-center gap-10"
+      >
+        <div class="flex justify-center items-center">
+          <h1 class="text-3xl text-gray-700 font-bold">Hello again!</h1>
+        </div>
+
+        <div class="flex justify-center items-center">
+          <h2 class="text-center text-gray-600 font-semibold">
+            Welcome back, you've been missed!
+          </h2>
+        </div>
+
+        <div class="w-full">
+          <app-text-input label="Login" />
+        </div>
+
+        <div>
+          <app-text-input label="Password" />
+        </div>
+
+        <div class="w-full flex justify-end">
+          <!-- TODO# Create account recovery link (?) -->
+          <a
+            class="no-underline text-sm cursor-pointer font-semibold text-gray-400"
+            >Forgot your password?</a
+          >
+        </div>
+
+        <div class="w-full">
+          <app-button class="__btn-shadow select-none"> Sign In </app-button>
+        </div>
+      </div>
+
+      <!-- form ends -->
+    </div>
+  </div>
+</main>
