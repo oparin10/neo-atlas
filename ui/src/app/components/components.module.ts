@@ -29,6 +29,7 @@ import { PersonalContactSectionComponent } from './personal-contact-section/pers
 import { ModalComponent } from './modal/modal.component';
 import { BackdropComponent } from './backdrop/backdrop.component';
 import { PhoneMaskDirective } from './text-input/phone-mask.directive';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 export function playerFactory() {
   return player;
@@ -57,6 +58,7 @@ const declarations = [
   ModalComponent,
   BackdropComponent,
   PhoneMaskDirective,
+  LoginFormComponent,
 ];
 
 @NgModule({

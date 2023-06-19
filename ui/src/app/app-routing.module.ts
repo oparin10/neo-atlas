@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LandingLayoutComponent } from './layouts/landing-layout/landing-layout.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 const routes: Routes = [
   {
@@ -21,10 +22,7 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () =>
-      import('./pages/login-page/login-page.component').then(
-        (m) => m.LoginPageComponent
-      ),
+    component: LoginPageComponent,
   },
 ];
 
