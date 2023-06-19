@@ -36,7 +36,7 @@ public class AppConfiguration
 
     private string GetConnectionString()
     {
-        var env = IsDev() ? Utils.DotEnv.Load("../.env.dev") : Utils.DotEnv.Load("../.env");
+        var env = IsDev() ? Utils.DotEnv.Read("../.env.dev") : Utils.DotEnv.Read("../.env");
 
         var _conn = env["DB_CONNECTION_STRING"] ?? throw new Exception("DB_CONNECTION_STRING is not set");
 

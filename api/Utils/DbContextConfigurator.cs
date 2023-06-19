@@ -9,7 +9,7 @@ public class MySQLContextOptionsConfigurator : IDBContextOptionsConfigurator
 
     private static string GetConnectionString()
     {
-        var env = DotEnv.Load("../.env.dev");
+        var env = DotEnv.Read("../.env.dev");
 
         var _conn = env[DatabaseConstants.ConnectionString] ?? throw new Exception("DB_CONNECTION_STRING is not set");
 

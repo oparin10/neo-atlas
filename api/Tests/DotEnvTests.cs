@@ -12,7 +12,7 @@ public class DotEnvTests
     [Test]
     public void ParsesEnvFile_ReturnsDictionary()
     {
-        var env = DotEnv.Load(CreateTestEnvFile());
+        var env = DotEnv.Read(CreateTestEnvFile());
 
         Assert.IsInstanceOf<IDictionary<string, string>>(env);
     }
@@ -22,7 +22,7 @@ public class DotEnvTests
     [Test]
     public void ParsesEnvFile_ThrowsFileNotFoundException()
     {
-        Assert.Throws<FileNotFoundException>(() => DotEnv.Load("non-existent-file.env"));
+        Assert.Throws<FileNotFoundException>(() => DotEnv.Read("non-existent-file.env"));
     }
 
 
