@@ -1,11 +1,20 @@
 <div class="relative w-full rounded-lg">
   <input class="{{ styles.input }}" id="input" type="text" placeholder=" " />
-  <label class="{{ styles.label }}" for="input"
-    >Aleksander Mirowsky Avila</label
+  <label
+    class="{{ styles.label.base }} {{ styles.label.hasValue }} {{
+      styles.label.focus
+    }} {{ styles.label.reset }}"
+    for="input"
+    >Password</label
   >
-  <fieldset class="{{ styles.fieldset }}" aria-hidden="true">
+  <fieldset
+    class="{{ styles.fieldset.base }} {{ styles.fieldset.hasValue }} {{
+      styles.fieldset.focus
+    }} {{ styles.fieldset.reset }}"
+    aria-hidden="true"
+  >
     <legend class="{{ styles.legend }}">
-      <span class="{{ styles.span }}">Aleksander Mirowsky Avila</span>
+      <span class="{{ styles.span }}">Password</span>
     </legend>
   </fieldset>
 </div>
