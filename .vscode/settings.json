@@ -1,3 +1,14 @@
 {
-  "dotnet.defaultSolution": "api/api.sln"
+  "dotnet.defaultSolution": "api/api.sln",
+  "files.associations": {
+    "*.css": "tailwindcss",
+    ".env*": "properties"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    ["classNames\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    ["tw\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    ["(?:enter|leave)(?:From|To)?=\\s*(?:\"|')([^(?:\"|')]*)"],
+    ["const.*_tw\\s=\\s{([^}]*)", "\\s*(?:\"|')([^(?\"|')]*)"]
+  ]
 }
