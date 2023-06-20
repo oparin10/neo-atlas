@@ -11,7 +11,7 @@ export class TextFieldComponent {
 
 const styles_tw = {
   legend:
-    'float-[unset] w-auto origin-top-left text-[8px] overflow-hidden block invisible h-[11px] duration-300 transition-[max-width_transform]',
+    'float-[unset] w-auto origin-top-left text-[8px] overflow-hidden block invisible h-[11px] duration-150 will-change-[max-width] transition-[max-width]',
 
   input: 'peer focus:ring-0 border-none w-full rounded-[inherit] text-sm py-3',
   label: {
