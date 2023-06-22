@@ -11,7 +11,7 @@ export class TextFieldComponent {
 
 const styles_tw = {
   legend:
-    'float-[unset] w-auto origin-top-left text-[8px] overflow-hidden block invisible h-[11px] duration-150 will-change-[max-width] transition-[max-width]',
+    'float-[unset] w-auto origin-top-left text-[8px] overflow-hidden block invisible h-[11px] will-change-[max-width] transition-[max-width] duration-100',
 
   input: 'peer focus:ring-0 border-none w-full rounded-[inherit] text-sm py-3',
   label: {
@@ -28,7 +28,7 @@ const styles_tw = {
     base: 'pl-2 [&>legend]:max-w-[0.01px] overflow-hidden top-[-5px] border border-solid border-gray-300 rounded-[inherit]',
     reset: 'text-left m-0 absolute inset-0 overflow-hidden pointer-events-none',
     focus:
-      'peer-focus:[&>legend]:max-w-lg peer-focus:border-2 peer-focus:border-primary-400',
+      'peer-focus:[&>legend]:max-w-lg peer-focus:border-2 peer-focus:border-primary-400 peer-focus:[&>legend]:duration-300',
   },
   span: 'text-[10px] px-[5px] whitespace-nowrap',
 };
