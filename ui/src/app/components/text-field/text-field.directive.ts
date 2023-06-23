@@ -5,7 +5,8 @@ import { Directive } from '@angular/core';
 @Directive({
   selector: 'input[textField]',
   host: {
-    class: 'text-red-500',
+    class:
+      'peer focus:ring-0 border-none w-full rounded-[inherit] text-sm py-3',
   },
 })
 export class TextFieldDirective {}
