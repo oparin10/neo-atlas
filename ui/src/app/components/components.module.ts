@@ -31,6 +31,7 @@ import { BackdropComponent } from './backdrop/backdrop.component';
 import { PhoneMaskDirective } from './text-input/phone-mask.directive';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { TextFieldComponent } from './text-field/text-field.component';
+import { TextFieldDirective } from './text-field/text-field.directive';
 
 export function playerFactory() {
   return player;
@@ -61,6 +62,7 @@ const declarations = [
   PhoneMaskDirective,
   LoginFormComponent,
   TextFieldComponent,
+  TextFieldDirective,
 ];
 
 @NgModule({
