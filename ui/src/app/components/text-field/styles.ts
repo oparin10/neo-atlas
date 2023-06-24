@@ -1,8 +1,11 @@
 export const styles_tw = {
-  legend:
-    'float-[unset] w-auto origin-top-left text-[8px] overflow-hidden block invisible h-[11px] will-change-[max-width] transition-[max-width] duration-100',
+  legend: {
+    base: 'float-[unset] w-auto origin-top-left text-[8px] overflow-hidden block invisible h-[11px] will-change-[max-width] transition-[max-width] duration-100',
+  },
 
-  input: 'peer focus:ring-0 border-none w-full rounded-[inherit] text-sm py-3',
+  input: {
+    base: 'peer focus:ring-0 border-none w-full rounded-[inherit] text-sm py-3',
+  },
   label: {
     base: 'top-[50%] translate-y-[-50%] left-0 pl-3 duration-200  text-gray-500 transition-all  h-fit origin-top-left text-xs absolute',
     hasValue:
@@ -19,5 +22,7 @@ export const styles_tw = {
     focus:
       'peer-focus:[&>legend]:max-w-lg peer-focus:border-2 peer-focus:border-primary-400 peer-focus:[&>legend]:duration-300',
   },
-  span: 'text-[10px] px-[5px] whitespace-nowrap',
+  span: {
+    base: 'text-[10px] px-[5px] whitespace-nowrap',
+  },
 };

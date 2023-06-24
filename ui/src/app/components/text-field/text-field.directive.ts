@@ -2,12 +2,12 @@
 
 import { AfterViewInit, Directive, ElementRef, ViewChild } from '@angular/core';
 import { TextFieldWrapper } from './text-field-wrapper.component';
+import { styles_tw } from './styles';
 
 @Directive({
   selector: 'input[textField]',
   host: {
-    class:
-      'peer focus:ring-0 border-none w-full rounded-[inherit] text-sm py-3',
+    class: styles_tw.input.base,
   },
 })
 export class TextFieldDirective implements AfterViewInit {
