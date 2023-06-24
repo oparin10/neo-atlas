@@ -30,7 +30,6 @@ import { ModalComponent } from './modal/modal.component';
 import { BackdropComponent } from './backdrop/backdrop.component';
 import { PhoneMaskDirective } from './text-input/phone-mask.directive';
 import { LoginFormComponent } from './login-form/login-form.component';
-import { TextFieldComponent } from './text-field/text-field.component';
 import { TextFieldDirective } from './text-field/text-field.directive';
 import { TextFieldWrapper } from './text-field/text-field-wrapper.component';
 import { PhoneMaskDirectiveV2 } from './text-field/phone-mask-v2.directive';
@@ -63,7 +62,6 @@ const declarations = [
   BackdropComponent,
   PhoneMaskDirective,
   LoginFormComponent,
-  TextFieldComponent,
   TextFieldDirective,
   TextFieldWrapper,
   PhoneMaskDirectiveV2,
