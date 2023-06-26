@@ -8,6 +8,14 @@
       [formGroup]="form"
       (ngSubmit)="onSubmit()"
     >
+      <app-text-field-wrapper
+        [label]="'Nome'"
+        [error]="form.controls.name.invalid && form.controls.name.touched"
+        [errorText]="'Nome inválido'"
+      >
+        <input textField formControlName="name" />
+      </app-text-field-wrapper>
+
       <app-text-input
         id="name"
         [error]="form.controls.name.invalid && form.controls.name.touched"
