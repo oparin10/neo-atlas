@@ -29,13 +29,19 @@
         <input phoneMask textField type="text" />
       </app-text-field-wrapper>
 
-      <app-text-input
+      <app-text-field-wrapper
         [error]="form.controls.email.invalid && form.controls.email.touched"
-        [errorText]="'E-mail inválido'"
-        formControlName="email"
+        [errorText]="
+          form.controls.email.hasError('required')
+            ? 'E-mail é obrigatório'
+            : 'E-mail inválido'
+        "
         class="lg:col-span-2"
         [label]="'E-mail'"
-      />
+      >
+        <input type="text" textField />
+      </app-text-field-wrapper>
+
       <app-text-area
         formControlName="message"
         class="lg:col-span-2"
