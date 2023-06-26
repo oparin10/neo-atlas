@@ -13,25 +13,23 @@
         [error]="form.controls.name.invalid && form.controls.name.touched"
         [errorText]="'Nome inválido'"
       >
-        <input textField formControlName="name" />
+        <input type="text" textField formControlName="name" />
       </app-text-field-wrapper>
 
-      <app-text-input
-        id="name"
-        [error]="form.controls.name.invalid && form.controls.name.touched"
-        [errorText]="'Nome inválido'"
-        formControlName="name"
-        [label]="'Nome'"
-      />
-      <app-text-input
-        [value]="form.controls.phone.value ?? ''"
+      <app-text-field-wrapper
         [label]="'Telefone'"
         [error]="form.controls.phone.invalid && form.controls.phone.touched"
-        [errorText]="'Telefone inválido'"
-        (onValueChange)="onPhoneChange($event)"
+        [errorText]="
+          form.controls.phone.hasError('required')
+            ? 'Telefone é obrigatório'
+            : 'Telefone inválido'
+        "
         formControlName="phone"
-        appPhoneMask
-      />
+        phoneMask
+      >
+        <input textField type="text" />
+      </app-text-field-wrapper>
+
       <app-text-input
         [error]="form.controls.email.invalid && form.controls.email.touched"
         [errorText]="'E-mail inválido'"
