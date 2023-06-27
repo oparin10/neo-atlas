@@ -19,7 +19,6 @@ import { RemoteLottieAnimationComponent } from './remote-lottie-animation/remote
 
 import player from 'lottie-web';
 import { LottieModule } from 'ngx-lottie';
-import { TextInputComponent } from './text-input/text-input.component';
 import { TextAreaComponent } from './text-area/text-area.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { PhoneNumberComponent } from './phone-number/phone-number.component';
@@ -28,7 +27,6 @@ import { ContactCardComponent } from './contact-card/contact-card.component';
 import { PersonalContactSectionComponent } from './personal-contact-section/personal-contact-section.component';
 import { ModalComponent } from './modal/modal.component';
 import { BackdropComponent } from './backdrop/backdrop.component';
-import { PhoneMaskDirective } from './text-input/phone-mask.directive';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { TextFieldDirective } from './text-field/text-field.directive';
 import { TextFieldWrapper } from './text-field/text-field-wrapper.component';
@@ -52,7 +50,6 @@ const declarations = [
   OurProcessComponent,
   ContactUsComponent,
   RemoteLottieAnimationComponent,
-  TextInputComponent,
   TextAreaComponent,
   ContactFormComponent,
   PhoneNumberComponent,
@@ -60,7 +57,6 @@ const declarations = [
   PersonalContactSectionComponent,
   ModalComponent,
   BackdropComponent,
-  PhoneMaskDirective,
   LoginFormComponent,
   TextFieldDirective,
   TextFieldWrapper,
