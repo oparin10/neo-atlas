@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { TextFieldDirective } from './text-field.directive';
+import { styles_tw } from './styles';
 
 @Component({
   template: `
@@ -32,7 +33,7 @@ describe('TextFieldDirective', () => {
 
   it('should apply the directive class to the input element', () => {
     const inputElement = component.inputElement.nativeElement;
-    expect(inputElement.classList).toContain('base');
+    expect(inputElement.classList).toContain(styles_tw.input.base);
   });
 
   it('should set the id of the input element based on the wrapper component', () => {
